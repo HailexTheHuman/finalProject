@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') -%>
+    <title>Projects</title>
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <h1>Hailex Myers</h1>
+            <p class="tagline">AI and Software Engineer</p>
+        </div>
+    </header>
+    <%- include('nav') -%>
+    <main id="main-content" role="main">
+        <div class="container">
+            <section id="projects" aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Projects</h2>
+                <div class="projects-content">
+                    <ul>
+                        <li>A site that accesses a database to let users add or remove jokes</li>
+                        <li>A site that uses sessions and encryption to let users register, login, and edit their profiles</li>
+                        <li>A trivia site that accesses an api to randomize questions, and gives points based on the question difficulty</li>
+                        <li>A CLI maze game</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('footer') -%>
+</body>
+</html>

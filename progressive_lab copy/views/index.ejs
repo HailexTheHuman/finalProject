@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') -%>
+    <script src="../js/quote.js"></script>
+    <script src="../js/slides.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <h1>Hailex Myers</h1>
+            <p class="tagline">AI and Software Engineer</p>
+        </div>
+    </header>
+    <%- include('nav') -%>
+    <main id="main-content" role="main">
+        <div class="container">
+            <section id="quotes" aria-labelledby="quotes-heading">
+                <h2 id="quotes-heading">Random quote with the images this site uses</h2>
+                <p id="quote"></p>
+                <img id="slide" alt="slideShowOfMemes" />
+            </section>
+        </div>
+    </main>
+    <%- include('footer') -%>
+</body>
+</html>

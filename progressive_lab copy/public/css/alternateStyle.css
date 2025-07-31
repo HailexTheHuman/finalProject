@@ -1,0 +1,246 @@
+:root {
+    --primary: #fff;
+    --secondary: #e614a7;
+    --trimary: #ea3bb6;
+    --quadary: #94f676;
+    --quatary: #67fc39;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --font: 'Segoe UI', sans-serif;
+}
+
+body.dark-theme {
+    --primary: #000;
+    --secondary: #19eb58;
+    --trimary: #15c449;
+    --quadary: #6b0989;
+    --quatary: #9803c6;
+    --shadow: 0 2px 10px rgba(255, 255, 255, 0.7);
+    --font: 'Segoe UI', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--primary);
+    background-image: image-set('../images/space.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--quadary);
+    line-height: 1.6;
+    padding: 2px;
+}
+
+
+header {
+    text-align: center;
+    background-color: var(--quadary);
+    color: var(--secondary);
+    padding: 2px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 17px;
+    margin-top: 0.5px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 1px 0 2px 0;
+    gap: 1.5px;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: var(--quatary);
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--quadary);
+    text-decoration: underline;
+}
+
+
+main {
+    max-width: 900px;
+    margin: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px;
+    padding: 1px;
+}
+
+
+#about, #interests, #favorites, #plans {
+    background-color: var(--secondary);
+    padding: 1.5px;
+    margin-bottom: 2px;
+    border-left: 5px solid var(--quadary);
+    border-radius: 5px;
+}
+
+.about-text p, .interests-text p, .favorites-text p, .plans-text p {
+    margin-bottom: 1px;
+}
+
+footer p {
+    padding: 1.5px;
+    margin-bottom: 2px;
+    color: var(--trimary);
+}
+
+aside.interests {
+    background-color: var(--secondary);
+    padding: 1px;
+    margin-top: 1px;
+    border-left: 4px solid var(--quadary);
+    border-radius: 4px;
+}
+
+
+details {
+    margin-top: 1px;
+    padding: 0.5px;
+    background-color: var(--secondary);
+    border: 1px solid var(--trimary);
+    border-radius: 4px;
+}
+
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+h2, h3 {
+    color: var(--quadary);
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+table, th, td {
+    margin: auto;
+    padding: 0.5px;
+    background-color: var(--secondary);
+    border: 2px solid var(--quadary);
+    border-collapse: collapse;
+}
+
+#imgOfMe {
+    padding: 0px;
+    margin-bottom: 0px;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+    width: 140px;
+}
+
+#imgOfRick {
+    padding: 0px;
+    margin-bottom: 0px;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    width: 420px;
+}
+
+#imgOfDaFuture {
+    padding: 0px;
+    margin-bottom: 0px;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    width: 420px;
+}
+
+#caption {
+    text-align: center;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    color: var(--secondary);
+    background: var(--quadary);
+    border: var(--primary);
+    border-width: 1px;
+    padding: 0.5px 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+#theme-toggle:hover {
+    background: var(--quatary);
+}
+
+#style-toggle {
+    position: absolute;
+    top: 50px;
+    left: 2px;
+    color: var(--secondary);
+    background: var(--quadary);
+    border: var(--primary);
+    border-width: 1px;
+    padding: 0.5px 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+#style-toggle:hover {
+    background: var(--quatary);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .theme-toggle {
+        position: static;
+        margin-bottom: 1px;
+    }
+}
+
+
+@media print {
+    .theme-toggle {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+}
